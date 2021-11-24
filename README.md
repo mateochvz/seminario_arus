@@ -1,1 +1,1 @@
-# seminario_arus
+# Seminario ARUS
