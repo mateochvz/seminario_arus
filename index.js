@@ -1,11 +1,14 @@
-const chalk = require('chalk')
+// const chalk = require('chalk')
 const express = require('express')
 
 const app = express()
 
-let port =3000
-app.listen(port, ()=>{
-    console.log('Servidor corriendo en el puerto',port)
-})
+app.get('/home', (req, res) => {res.send('<h1>Hola mundo </h1>')})
+app.get('/page', (req, res) => {res.send({message: 'Hola mundo'})})
 
-// console.log(chalk.bgCyan.italic.bold('Hello world!')); 
+const port = 3000
+app.listen(port, () => {
+  const environment = process.env.NODE_ENV
+  console.log('Servidor corriendo en: ', 'http://localhost:3000/home')
+})
+// console.log(chalk.bgCyan.italic.bold('Hello world!'));

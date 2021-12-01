@@ -4,14 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon ./index.js",
+    "start": "node ./index.js",
+    "lint" : "standard"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DiegoRTK/seminario_arus.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/DiegoRTK/seminario_arus/issues"
   },
@@ -19,5 +21,9 @@
   "dependencies": {
     "chalk": "^4.0.0",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "standard": "^16.0.4"
   }
 }
